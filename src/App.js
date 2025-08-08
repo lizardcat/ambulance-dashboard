@@ -48,7 +48,7 @@ const AmbulanceDispatchDashboard = () => {
     { id: 5, sender: 'Dispatch', message: 'Unit 102, take Outer Ring Road to bypass traffic', time: '14:27', type: 'dispatch' }
   ]);
 
-  // Mock data for ambulances
+  // Mock data for ambulances 
   const [ambulances] = useState([
     {
       id: 'AMB-101',
@@ -166,6 +166,108 @@ const AmbulanceDispatchDashboard = () => {
         medicalHistory: 'Asthma, no other conditions',
         vitals: 'O2: 89%, HR: 120, Distressed'
       }
+    },
+    {
+      id: 'E-2024-005',
+      priority: 'Critical',
+      location: 'Mombasa Road, Industrial Area',
+      coordinates: { lat: -1.3164, lng: 36.8378 },
+      timeReceived: '14:20',
+      timeSince: '13 min ago',
+      description: 'Industrial accident, multiple injuries',
+      assignedAmbulance: 'AMB-104',
+      patientInfo: {
+        name: 'Joseph Mutua',
+        age: 42,
+        symptoms: 'Crush injury to left arm, bleeding',
+        medicalHistory: 'Hypertension, smoker',
+        vitals: 'BP: 90/60, HR: 130, Pale'
+      }
+    },
+    {
+      id: 'E-2024-006',
+      priority: 'Medium',
+      location: 'Langata Road, Kilimani',
+      coordinates: { lat: -1.2902, lng: 36.7836 },
+      timeReceived: '14:28',
+      timeSince: '5 min ago',
+      description: 'Allergic reaction to medication',
+      assignedAmbulance: null,
+      patientInfo: {
+        name: 'Catherine Moraa',
+        age: 29,
+        symptoms: 'Facial swelling, rash, itching',
+        medicalHistory: 'No known drug allergies',
+        vitals: 'BP: 110/70, HR: 95, Alert'
+      }
+    },
+    {
+      id: 'E-2024-007',
+      priority: 'High',
+      location: 'Forest Road, Parklands',
+      coordinates: { lat: -1.2571, lng: 36.8580 },
+      timeReceived: '14:32',
+      timeSince: '1 min ago',
+      description: 'Seizure, teenage patient',
+      assignedAmbulance: 'AMB-105',
+      patientInfo: {
+        name: 'Michael Omondi',
+        age: 16,
+        symptoms: 'Post-ictal confusion, witnessed seizure',
+        medicalHistory: 'Epilepsy, on medication',
+        vitals: 'BP: 125/80, HR: 88, Drowsy'
+      }
+    },
+    {
+      id: 'E-2024-008',
+      priority: 'Low',
+      location: 'Kiambu Road, Muthaiga',
+      coordinates: { lat: -1.2369, lng: 36.8439 },
+      timeReceived: '14:15',
+      timeSince: '18 min ago',
+      description: 'Minor cut requiring stitches',
+      assignedAmbulance: null,
+      patientInfo: {
+        name: 'Susan Kamau',
+        age: 35,
+        symptoms: 'Laceration on forearm, 3cm deep',
+        medicalHistory: 'No significant history',
+        vitals: 'BP: 120/75, HR: 75, Stable'
+      }
+    },
+    {
+      id: 'E-2024-009',
+      priority: 'High',
+      location: 'Mama Ngina Street, CBD',
+      coordinates: { lat: -1.2833, lng: 36.8258 },
+      timeReceived: '14:34',
+      timeSince: '30 sec ago',
+      description: 'Unconscious person, unknown cause',
+      assignedAmbulance: null,
+      patientInfo: {
+        name: 'Unknown Patient',
+        age: 'Est. 50s',
+        symptoms: 'Unconscious, unresponsive to verbal stimuli',
+        medicalHistory: 'Unknown',
+        vitals: 'BP: Unknown, HR: 60, Unconscious'
+      }
+    },
+    {
+      id: 'E-2024-010',
+      priority: 'Medium',
+      location: 'Valley Road, Westlands',
+      coordinates: { lat: -1.2682, lng: 36.8066 },
+      timeReceived: '14:26',
+      timeSince: '7 min ago',
+      description: 'Pregnancy complications',
+      assignedAmbulance: null,
+      patientInfo: {
+        name: 'Joyce Wambui',
+        age: 28,
+        symptoms: 'Severe abdominal pain, 8 months pregnant',
+        medicalHistory: 'Normal pregnancy, no complications',
+        vitals: 'BP: 150/90, HR: 100, Anxious'
+      }
     }
   ]);
 
@@ -231,7 +333,7 @@ const AmbulanceDispatchDashboard = () => {
     { time: '14:45', responseTime: 6.5, activeCalls: 11, utilization: 78 }
   ]);
 
-  // System alerts
+  // System alerts (Nairobi context)
   const [alerts] = useState([
     { id: 1, type: 'critical', message: 'No available ambulances in Eastlands area', time: '14:30' },
     { id: 2, type: 'warning', message: 'Heavy traffic on Thika Super Highway affecting ETA', time: '14:28' },
@@ -295,7 +397,7 @@ const AmbulanceDispatchDashboard = () => {
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-2">
               <Ambulance className="h-8 w-8 text-red-600" />
-              <h1 className="text-2xl font-bold text-gray-800">Emergency Dispatch Center</h1>
+              <h1 className="text-2xl font-bold text-gray-800">Nairobi Emergency Dispatch Center</h1>
             </div>
             <div className="flex items-center space-x-2 text-sm text-gray-600">
               <Clock className="h-4 w-4" />
