@@ -1,70 +1,145 @@
-# Getting Started with Create React App
+# Nairobi Emergency Ambulance Dispatch Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A comprehensive, real-time emergency dispatch system demo built specifically for the Nairobi/Kenyan context. This dashboard simulates a complete ambulance dispatch center with live tracking, emergency management, hospital coordination, and communication systems.
 
-## Available Scripts
+## Screenshots
 
-In the project directory, you can run:
+![Dashboard Preview 1](/assets/dashboard_1.png)
 
-### `npm start`
+![Dashboard Preview 2](/assets/dashboard_2.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![Dashboard Preview 3](/assets/dashboard_3.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![Dashboard Preview 4](/assets/dashboard_4.png)
 
-### `npm test`
+## Demo Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Interactive Map**: Click on ambulance/emergency markers for details
+- **Real-time Updates**: Live clock and simulated data updates
+- **Emergency Selection**: Click emergencies to view patient details
+- **Working Chat**: Send messages in the communication panel
+- **Responsive Design**: Works on desktop, tablet, and mobile
+- **Professional UI**: Modern design with proper color coding
 
-### `npm run build`
+## Technology Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Frontend**: React 18 with Hooks
+- **Styling**: Tailwind CSS 3.x
+- **Maps**: React Leaflet with OpenStreetMap
+- **Charts**: Recharts for performance metrics
+- **Icons**: Lucide React
+- **State Management**: React useState/useEffect
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Node.js** 16.0 or higher
+- **npm** or **yarn** package manager
+- **Modern web browser** (Chrome, Firefox, Safari, Edge)
 
-### `npm run eject`
+## Installation Instructions
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### **Step 1: Create React Application**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+# Create new React app
+npx create-react-app nairobi-ambulance-dashboard
+cd nairobi-ambulance-dashboard
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### **Step 2: Install Dependencies**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+# Install required packages
+npm install leaflet react-leaflet recharts lucide-react
 
-## Learn More
+# Install Tailwind CSS 3.x
+npm install -D tailwindcss postcss autoprefixer
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### **Step 3: Configure Tailwind CSS**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Create `tailwind.config.js` in your project root:
 
-### Code Splitting
+```javascript
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Create `postcss.config.js` in your project root:
 
-### Analyzing the Bundle Size
+```javascript
+module.exports = {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+};
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### **Step 4: Update CSS File**
 
-### Making a Progressive Web App
+Replace the contents of `src/index.css`:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
 
-### Advanced Configuration
+### **Step 5: Add Leaflet CSS**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Add this line to the `<head>` section of `public/index.html`:
 
-### Deployment
+```html
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### **Step 6: Replace App Component**
 
-### `npm run build` fails to minify
+Replace the contents of `src/App.js` with the dashboard code provided.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### **Step 7: Start Development Server**
+
+```bash
+npm start
+```
+
+Your dashboard will be available at `http://localhost:3000`
+
+## Project Structure
+
+```
+ambulance-dashboard/
+├── public/
+│   ├── index.html              # Add Leaflet CSS here
+│   └── ...
+├── src/
+│   ├── App.js                  # Main dashboard component
+│   ├── index.css               # Tailwind directives
+│   ├── index.js                # React entry point
+│   └── ...
+├── tailwind.config.js          # Tailwind configuration
+├── postcss.config.js           # PostCSS configuration
+├── package.json                # Dependencies and scripts
+└── README.md                   # This file
+```
+
+## 🙋Support
+
+For questions, issues, or feature requests:
+
+- Create an issue on GitHub
+- Contact me here on GitHub
+
+**Built with ❤️ for SWE4040-A - Software Construction Course**
+
+_This is a demonstration system designed to showcase modern emergency dispatch capabilities in the Nairobi context. For production use, additional security, authentication, and integration features would be required._
