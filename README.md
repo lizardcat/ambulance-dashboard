@@ -2,6 +2,10 @@
 
 A simple emergency dispatch system demo built specifically for the Nairobi/Kenyan/African context. This dashboard simulates a complete ambulance dispatch center with live tracking, emergency management, hospital coordination, and communication systems.
 
+<a href="https://ambulance-dashboard.netlify.app/" target="_blank">
+  <img src="https://img.shields.io/badge/LIVE_DEMO-Click_Here-blue?style=for-the-badge&logo=github" />
+</a>
+
 ## Screenshots
 
 ![Dashboard Preview 1](/assets/dashboard_1.png)
