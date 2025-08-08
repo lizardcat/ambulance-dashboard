@@ -105,7 +105,7 @@ Add this line to the `<head>` section of `public/index.html`:
 
 ### **Step 6: Replace App Component**
 
-Replace the contents of `src/App.js` with the dashboard code provided.
+Replace the contents of `src/App.js` with the dashboard code in this repo.
 
 ### **Step 7: Start Development Server**
 
@@ -133,13 +133,13 @@ ambulance-dashboard/
 └── README.md                   # This file
 ```
 
-## 🙋Support
+## Support
 
 For questions, issues, or feature requests:
 
 - Create an issue on GitHub
-- Contact me here on GitHub
+- Contact me here or on Bluesky
 
-**Built with ❤️ for SWE4040-A - Software Construction Course**
+**Built with ❤️ for USIU's SWE4040-A (Software Construction) course**
 
 _This is a demonstration system designed to showcase modern emergency dispatch capabilities in the Nairobi context. For production use, additional security, authentication, and integration features would be required._
