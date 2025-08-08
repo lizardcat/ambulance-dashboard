@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { MapContainer, TileLayer, Marker, Popup, Circle } from 'react-leaflet';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar } from 'recharts';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { 
   Ambulance, 
   MapPin, 
   Clock, 
-  Users, 
-  Activity, 
   AlertTriangle, 
-  Phone, 
   Send, 
   Filter,
   Navigation,
@@ -18,7 +15,6 @@ import {
   MessageCircle,
   CheckCircle,
   XCircle,
-  Timer,
   TrendingUp,
   Radio
 } from 'lucide-react';
@@ -52,7 +48,7 @@ const AmbulanceDispatchDashboard = () => {
     { id: 5, sender: 'Dispatch', message: 'Unit 102, take Outer Ring Road to bypass traffic', time: '14:27', type: 'dispatch' }
   ]);
 
-  // Mock data for ambulances 
+  // Mock data for ambulances
   const [ambulances] = useState([
     {
       id: 'AMB-101',
@@ -173,7 +169,7 @@ const AmbulanceDispatchDashboard = () => {
     }
   ]);
 
-  // Mock hospital data 
+  // Mock hospital data
   const [hospitals] = useState([
     {
       id: 'H-001',
@@ -299,7 +295,7 @@ const AmbulanceDispatchDashboard = () => {
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-2">
               <Ambulance className="h-8 w-8 text-red-600" />
-              <h1 className="text-2xl font-bold text-gray-800">Nairobi Emergency Dispatch Center</h1>
+              <h1 className="text-2xl font-bold text-gray-800">Emergency Dispatch Center</h1>
             </div>
             <div className="flex items-center space-x-2 text-sm text-gray-600">
               <Clock className="h-4 w-4" />

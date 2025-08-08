@@ -1,6 +1,6 @@
 # Nairobi Emergency Ambulance Dispatch Dashboard
 
-A comprehensive, real-time emergency dispatch system demo built specifically for the Nairobi/Kenyan context. This dashboard simulates a complete ambulance dispatch center with live tracking, emergency management, hospital coordination, and communication systems.
+A simple emergency dispatch system demo built specifically for the Nairobi/Kenyan/African context. This dashboard simulates a complete ambulance dispatch center with live tracking, emergency management, hospital coordination, and communication systems.
 
 ## Screenshots
 
