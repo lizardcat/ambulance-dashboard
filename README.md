@@ -138,7 +138,7 @@ ambulance-dashboard/
 For questions, issues, or feature requests:
 
 - Create an issue on GitHub
-- Contact me here or on Bluesky
+- Contact me here or on [Bluesky](https://bsky.app/profile/alexraza.tech)
 
 **Built with ❤️ for USIU's SWE4040-A (Software Construction) course**
 
