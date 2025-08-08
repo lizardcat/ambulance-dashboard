@@ -333,7 +333,7 @@ const AmbulanceDispatchDashboard = () => {
     { time: '14:45', responseTime: 6.5, activeCalls: 11, utilization: 78 }
   ]);
 
-  // System alerts (Nairobi context)
+  // System alerts
   const [alerts] = useState([
     { id: 1, type: 'critical', message: 'No available ambulances in Eastlands area', time: '14:30' },
     { id: 2, type: 'warning', message: 'Heavy traffic on Thika Super Highway affecting ETA', time: '14:28' },
